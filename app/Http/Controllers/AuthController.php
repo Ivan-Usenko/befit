@@ -3,18 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
     public function register()
     {
-        if (Auth::check())
-        {
-            return redirect()->route('index.index');
-        }
-
         return view('auth.register');
     }
 
@@ -41,11 +35,6 @@ class AuthController extends Controller
 
     public function login()
     {
-        if (Auth::check())
-        {
-            return redirect()->route('index.index');
-        }
-
         return view('auth.login');
     }
 
