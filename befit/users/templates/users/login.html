@@ -1,0 +1,16 @@
+{% extends "base/form.html" %}
+
+{% block title %}Log In{% endblock title %}
+
+{% block form_action %}{% url 'login' %}{% endblock form_action %}
+{% block form_method %}post{% endblock form_method %}
+
+{% block form_title %}Log In{% endblock form_title %}
+
+{% block form_submit_text %}Log In{% endblock form_submit_text %}
+
+{% block form_extra_content %}
+    <div class="container-fluid d-flex justify-content-center">
+        <p class="p-0 m-0">Don't have an account? <a href="{% url 'register' %}">Register</a></p>
+    </div>
+{% endblock form_extra_content %}
